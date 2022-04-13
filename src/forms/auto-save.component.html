@@ -1,0 +1,41 @@
+<form #emailForm="ngForm" (submit)="onSubmit(emailForm)">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <ex-input-text
+      name="login"
+      ngModel
+      type="email"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="Enter email"
+      (inputBlur)="onSubmit(emailForm)"
+    ></ex-input-text>
+  </div>
+</form>
+<form #passwordForm="ngForm" (submit)="onSubmit(passwordForm)">
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <ex-input-text
+      name="password"
+      ngModel
+      type="password"
+      id="exampleInputPassword1"
+      placeholder="Password"
+      (inputBlur)="onSubmit(passwordForm)"
+    ></ex-input-text>
+  </div>
+</form>
+
+<form #rememberMeForm="ngForm" (submit)="onSubmit(rememberMeForm)">
+  <div class="form-check">
+    <input
+      name="rememberMe"
+      ngModel
+      type="checkbox"
+      class="form-check-input"
+      id="exampleCheck1"
+      (change)="onSubmit(rememberMeForm)"
+    />
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+</form>
